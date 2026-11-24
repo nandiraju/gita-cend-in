@@ -641,3 +641,166 @@ body:has(#flip-toggle:checked) .radial-orbit__frame {
   font-weight: 600;
   letter-spacing: -0.01em;
 }
+
+/* ===== Orbit feature cards =====
+   Phone-shaped cards that advertise app features instead of showing a
+   screenshot. Pure divs, so they add no image weight. No backdrop-filter
+   (kept off inside the 3D/preserve-3d orbit on purpose). */
+.radial-orbit__phone--feature {
+  background: #141418;
+  border-color: #141418;
+}
+
+.feature-card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 12px 9px;
+  text-align: center;
+  color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.feature-card__icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.feature-card__icon svg {
+  width: 19px;
+  height: 19px;
+  stroke: #fff;
+}
+
+.feature-card__title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.feature-card__sub {
+  font-family: "Inter", sans-serif;
+  font-size: 8.5px;
+  line-height: 1.3;
+  opacity: 0.88;
+  max-width: 92%;
+}
+
+/* Warm, brand-adjacent gradients (saffron-leaning), one per feature. */
+.feature-card--1 { background: linear-gradient(158deg, #f59e0b, #b45309); }
+.feature-card--2 { background: linear-gradient(158deg, #fb923c, #c2410c); }
+.feature-card--3 { background: linear-gradient(158deg, #f43f5e, #9f1239); }
+.feature-card--4 { background: linear-gradient(158deg, #6366f1, #3730a3); }
+.feature-card--5 { background: linear-gradient(158deg, #14b8a6, #0f766e); }
+.feature-card--6 { background: linear-gradient(158deg, #a855f7, #6b21a8); }
+
+/* ===== Footer ===== */
+.site-footer {
+  position: relative;
+  z-index: 5;
+  background: var(--bg);
+  color: var(--muted-fg);
+  border-top: 1px solid var(--card-border);
+  padding: 44px 0 40px;
+  font-family: "Inter", sans-serif;
+}
+
+.site-footer__inner,
+.site-footer__credits {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.site-footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-footer__brand img {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  box-shadow: inset 0 0 0 1px var(--card-border);
+}
+
+.site-footer__brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.site-footer__name {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.site-footer__copy {
+  font-size: 0.72rem;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.site-footer__links a,
+.site-footer__credits a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.site-footer__credits a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.site-footer__links a:hover,
+.site-footer__credits a:hover {
+  color: #d97706;
+}
+
+.site-footer__credits {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 720px) {
+  .site-footer__inner {
+    flex-direction: row;
+  }
+  .site-footer__credits {
+    text-align: left;
+  }
+}
