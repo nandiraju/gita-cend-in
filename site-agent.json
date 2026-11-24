@@ -1,0 +1,32 @@
+{
+  "$comment": "Managed by Site Launch Agent. Add file paths to \"preserve\" to stop the agent from overwriting them on future runs.",
+  "domain": "gita.cend.in",
+  "siteName": "Bhagavat Gita in Telugu",
+  "preserve": [],
+  "generatedFiles": [
+    "package.json",
+    "tsconfig.json",
+    "vite.config.ts",
+    ".github/workflows/deploy.yml",
+    "src/data/siteConfig.ts",
+    "src/index.css",
+    "src/components/Layout.tsx",
+    "src/App.tsx",
+    "src/main.tsx",
+    "index.html",
+    "scripts/prerender.mjs",
+    ".gitignore",
+    "public/.nojekyll",
+    "public/CNAME",
+    "public/sitemap.xml",
+    "public/robots.txt",
+    "public/llms.txt",
+    "AGENTS.md",
+    "index.html",
+    "prerender-pages.json",
+    "public/images/*",
+    "public/favicon*",
+    "public/apple-touch-icon.png"
+  ],
+  "updatedAt": "2026-11-24T17:52:07.157Z"
+}
